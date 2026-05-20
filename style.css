@@ -1,0 +1,164 @@
+/* ═══════════════════════════════════════
+   style.css — Cosmic Popper
+   ═══════════════════════════════════════ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #070b19;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; /* prevent zoom on double tap */
+}
+
+#game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+}
+
+/* ── HUD ─────────────────────────── */
+.hud {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.score-wrap, .lives-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    background: rgba(15, 20, 40, 0.55);
+    backdrop-filter: blur(6px);
+    padding: 8px 18px;
+    border-radius: 18px;
+    color: white;
+    min-width: 90px;
+}
+
+.label {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: rgba(200, 210, 240, 0.7);
+    font-weight: 400;
+}
+
+.score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f0e68c;
+    text-shadow: 0 0 10px rgba(255, 200, 50, 0.6);
+    line-height: 1;
+}
+
+.lives {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+}
+
+/* ── Start / Game Over screens ───── */
+.start-screen, .gameover-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(8, 12, 28, 0.8);
+    backdrop-filter: blur(12px);
+    padding: 40px 32px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transition: opacity 0.3s;
+}
+
+.gameover-screen.hidden,
+.start-screen.hidden {
+    display: none;
+}
+
+.game-title {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: #e8ecff;
+    text-shadow: 0 0 25px rgba(120, 150, 240, 0.7);
+}
+
+.game-sub {
+    font-size: 0.95rem;
+    color: rgba(200, 210, 240, 0.65);
+    letter-spacing: 0.1em;
+    margin-top: -10px;
+}
+
+.go-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #ffb0a0;
+    text-shadow: 0 0 20px rgba(255, 100, 80, 0.6);
+}
+
+.final-score {
+    font-size: 1.2rem;
+    color: rgba(220, 220, 250, 0.8);
+}
+
+.final-score span {
+    font-weight: 700;
+    color: #f0e68c;
+}
+
+.start-btn {
+    background: rgba(70, 100, 200, 0.25);
+    border: 1px solid rgba(180, 200, 255, 0.5);
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    padding: 12px 36px;
+    border-radius: 40px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.2s, transform 0.1s;
+    font-weight: 400;
+}
+
+.start-btn:hover {
+    background: rgba(90, 120, 230, 0.4);
+}
+
+.start-btn:active {
+    transform: scale(0.96);
+}
+
+@media (pointer: coarse) {
+    .start-btn {
+        padding: 14px 42px;
+        font-size: 1.2rem;
+    }
+}

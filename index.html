@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Popper — Pop the Bubbles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="game" aria-label="Bubble popping game canvas"></canvas>
+
+    <!-- HUD overlay -->
+    <div class="hud">
+        <div class="score-wrap">
+            <span class="label">SCORE</span>
+            <span class="score" id="scoreDisplay">0</span>
+        </div>
+        <div class="lives-wrap">
+            <span class="label">LIVES</span>
+            <span class="lives" id="livesDisplay">❤️❤️❤️</span>
+        </div>
+    </div>
+
+    <!-- Start screen -->
+    <div class="start-screen" id="startScreen">
+        <h1 class="game-title">COSMIC POPPER</h1>
+        <p class="game-sub">pop the bubbles before they float away</p>
+        <button class="start-btn" id="startBtn">START</button>
+    </div>
+
+    <!-- Game over screen -->
+    <div class="gameover-screen hidden" id="gameoverScreen">
+        <h2 class="go-title">GAME OVER</h2>
+        <p class="final-score">You popped <span id="finalScore">0</span> bubbles</p>
+        <button class="start-btn" id="restartBtn">PLAY AGAIN</button>
+    </div>
+
+    <!-- 
+        ═══════════════════════════════════════════════
+        COMPILE TypeScript → JavaScript before deploying:
+            npx tsc script.ts --target ES2020 --module ES2020
+        Then push script.js together with all files.
+        ═══════════════════════════════════════════════
+    -->
+    <script src="script.js"></script>
+</body>
+</html>
