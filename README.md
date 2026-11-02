@@ -1,4 +1,5 @@
-<!-- A mini-game where you have to pop bubbles.  --> <!-- <p></p> --> 
+<!-- A mini-game where you have to pop bubbles.  --> 
+<!-- <p></p> --> 
 # Balloon Mini Game — Cosmic Popper
 
 **Cosmic Balloon Pop** — a fun browser-based arcade game where you pop colorful balloons in space!
