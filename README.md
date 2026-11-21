@@ -1,6 +1,7 @@
 <!-- A mini-game where you have to pop bubbles.  --> 
 <!-- <p>
 thinking about what can be added to this game 🎯 
+so what ? 
 </p> --> 
 # Balloon Mini Game — Cosmic Popper
 
